@@ -8,6 +8,15 @@ import { LastItemsService, Item } from '../services/last-items.service';
   templateUrl: './last-items.component.html',
   styleUrl: './last-items.component.css'
 })
+
+
+/* export enum Params {
+  param1 = 'ciccio',
+  param2 = 'pasticcio',
+  param3 = 'minicicciolo'
+}
+*/
+
 export class LastItemsComponent implements OnInit{
   items : Item[] = [];
   constructor(private lastItemsService : LastItemsService){}
