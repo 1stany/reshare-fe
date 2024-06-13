@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LastItemsService } from '../services/last-items.service';
 
 @Component({
   selector: 'app-last-items',
@@ -8,9 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './last-items.component.css'
 })
 export class LastItemsComponent implements OnInit{
-  
+  constructor(private lastItem : LastItemsService){}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
 }
