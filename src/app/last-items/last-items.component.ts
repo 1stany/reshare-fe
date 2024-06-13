@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LastItemsService } from '../services/last-items.service';
+import { LastItemsService, Item } from '../services/last-items.service';
 
 @Component({
   selector: 'app-last-items',
@@ -9,8 +9,10 @@ import { LastItemsService } from '../services/last-items.service';
   styleUrl: './last-items.component.css'
 })
 export class LastItemsComponent implements OnInit{
-  constructor(private lastItem : LastItemsService){}
+  items : Item[] = [];
+  constructor(private lastItemsService : LastItemsService){}
   ngOnInit(): void {
+    this.lastItemsService.getLastItems();
   }
 
 }

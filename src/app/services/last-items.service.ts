@@ -1,8 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-interface Item{
+export interface Item{
   id : number;
   name : string;
   description : string;
@@ -13,6 +13,8 @@ interface Item{
   creationDate : string;
 }
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,8 +22,14 @@ export class LastItemsService {
   private apiUrl = 'http://localhost:8080/market';
   constructor(private http: HttpClient) { }
   
-  getLastItems(lastN : number) : Observable<Item[]>{
-    return this.http.get<[Item]>(`${this.apiUrl}` + lastN);
+  getLastItems(paramsObj : any) : Observable<Item[]>{
+    let params = new HttpParams();
+    for(const key in paramsObj){
+      if (paramsObj.hasOwnProperty(key)){
+        params = params.set(key, paramsObj[key].toString());
+      }
+    }
+    return this.http.get<[Item]>(this.apiUrl, {params});
   }
 
 }
