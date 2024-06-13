@@ -4,5 +4,5 @@ import { LastItemsComponent } from './last-items/last-items.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
-    {path: 'last', component: LastItemsComponent}
+    {path: 'last', component: LastItemsComponent},
 ];
