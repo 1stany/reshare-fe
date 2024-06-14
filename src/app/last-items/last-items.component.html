@@ -7,6 +7,7 @@
                 <th>Condizione</th>
                 <th>Categoria</th>
                 <th>Data</th>
+                <th>Città</th>
             </tr>
         </thead>
         <tbody>
@@ -16,7 +17,8 @@
                     <td>{{i.activetrade}}</td> 
                     <td>{{i.condition}}</td>
                     <td>{{i.categoryName}}</td> 
-                    <td>{{i.creationDate}}</td>   
+                    <td>{{i.creationDate}}</td> 
+                    <td>{{i.city}}</td>  
                     <td><a [routerLink] = "['/item', i.id]">mostra dettagli</a></td>  
                 </tr>
             }

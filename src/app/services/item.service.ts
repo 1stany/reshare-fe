@@ -11,6 +11,7 @@ export interface Item{
   conditionComment : string;
   categoryName : string;
   creationDate : string;
+  city : string;
 }
 
 @Injectable({
