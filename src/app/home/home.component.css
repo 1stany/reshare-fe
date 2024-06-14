@@ -6,7 +6,7 @@
 
 .btn {
     padding: 1rem 2rem;
-    background: #ff6600;
+    background:#667255e3;
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
@@ -16,7 +16,9 @@
 }
 
 .btn:hover {
-    background: #e65500;
+    background: #86e600;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
 .button-container {

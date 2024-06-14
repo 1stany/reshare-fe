@@ -1,11 +1,19 @@
+
 <section>
     <h3>Dettaglio oggetto</h3>
     <p>nome: {{item?.name}}</p>
     <p>descrizione: {{item?.description}}</p> 
     <p>stato: {{item?.activetrade}}</p>   
     <p>condizione: {{item?.condition}}</p> 
-    <p>commento: {{item?.conditionComment}}</p>   ù
+    <p>commento: {{item?.conditionComment}}</p>
     <p>categoria: {{item?.categoryName}}</p>  
     <p>data: {{item?.creationDate}}</p>  
-    
 </section>
+<div>
+    <span><button type="button" class="btn btn-secondary" routerLink= "/last">Indietro</button></span>
+    <span>
+        @if (item?.activetrade) {
+            <button id="trade" class="btn btn-success">Scambia</button>
+        }
+    </span>
+</div>

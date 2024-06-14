@@ -3,10 +3,8 @@
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Descrizione</th>
                 <th>Scambio</th>
                 <th>Condizione</th>
-                <th>Commento</th>
                 <th>Categoria</th>
                 <th>Data</th>
             </tr>
@@ -15,10 +13,8 @@
             @for (i of items; track i.id){
                 <tr>
                     <td>{{i.name}}</td> 
-                    <td>{{i.description}}</td>
                     <td>{{i.activetrade}}</td> 
                     <td>{{i.condition}}</td>
-                    <td>{{i.conditionComment}}</td>
                     <td>{{i.categoryName}}</td> 
                     <td>{{i.creationDate}}</td>   
                     <td><a [routerLink] = "['/item', i.id]">mostra dettagli</a></td>  
