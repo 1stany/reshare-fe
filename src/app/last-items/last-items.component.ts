@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { LastItemsService, Item } from '../services/last-items.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-last-items',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './last-items.component.html',
   styleUrl: './last-items.component.css'
 })
