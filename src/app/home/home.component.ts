@@ -9,5 +9,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+// onClick() {
+// throw new Error('Method not implemented.');
+// }
 
 }

@@ -10,18 +10,19 @@ import { LastItemsService, Item } from '../services/last-items.service';
 })
 
 
-/* export enum Params {
-  param1 = 'ciccio',
-  param2 = 'pasticcio',
-  param3 = 'minicicciolo'
-}
-*/
+//   export enum Params {
+//   param1 = '',
+//   param2 = true,
+//   param3 = ''
+// }
+
 
 export class LastItemsComponent implements OnInit{
   items : Item[] = [];
+  pars : [boolean, number] = [true, 10];
   constructor(private lastItemsService : LastItemsService){}
   ngOnInit(): void {
-    this.lastItemsService.getLastItems();
+    this.lastItemsService.getLastItems(this.pars).subscribe((i: Item[]) => (this.items = i));
   }
 
 }
