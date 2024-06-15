@@ -1,6 +1,5 @@
 header {
     height: 35vh;
-    background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
