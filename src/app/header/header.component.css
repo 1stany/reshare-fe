@@ -7,9 +7,13 @@ header {
     border: 1px solid black;
 }
 
-.navbar {
-    background:  rgba(0, 39, 87, 0.893);
-    color: #fff;
+#logo{
+    width: 12em;
+}
+
+nav{
+    background:  rgba(87, 0, 33, 0.893);
+    color: #ce0707;
     padding: 1rem 0;
 }
 
@@ -47,7 +51,6 @@ header {
 }
 
 .hero-content {
-    text-align: center;
     color: #0015b4;
     margin-bottom: 50px;
     border: 1px solid black;
