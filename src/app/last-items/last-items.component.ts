@@ -25,5 +25,4 @@ export class LastItemsComponent implements OnInit{
   ngOnInit(): void {
     this.lastItemsService.getLastItems(this.pars).subscribe((i: Item[]) => (this.items = i));
   }
-
 }
