@@ -10,8 +10,8 @@ export interface Item{
   condition : string;
   conditionComment : string;
   categoryName : string;
+  ownerCityName : string;
   creationDate : string;
-  city : string;
 }
 
 @Injectable({
