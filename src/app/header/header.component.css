@@ -4,16 +4,21 @@ header {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid black;
+    margin-block-end: 5em;
+    font-family: "Playwrite FR Moderne", cursive;
+    font-optical-sizing: auto;
+
 }
 
 #logo{
-    width: 12em;
+    width: 20em;
 }
 
 nav{
-    background:  rgba(87, 0, 33, 0.893);
+    background:  rgba(7, 87, 0, 0.893);
     color: #ce0707;
     padding: 1rem 0;
+    font-family: "Roboto";
 }
 
 .container {
@@ -45,15 +50,15 @@ nav{
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav:hover{
     color: #ff6600;
 }
 
 .hero-content {
     color: #0015b4;
-    margin-bottom: 50px;
     border: 1px solid black;
     background-color: #43b600a3;
+    padding-top: 2em;
 }
 
 .hero-content h1 {
@@ -64,4 +69,8 @@ nav{
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+}
+
+.container text-center {
+    margin: 0em;
 }
