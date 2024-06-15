@@ -1,8 +1,9 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LastItemsComponent } from './last-items/last-items.component';
 import { ItemComponent } from './item/item.component';
 import { LoginComponent } from './login/login.component';
+import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -10,3 +11,4 @@ export const routes: Routes = [
     {path: 'item/:id', component: ItemComponent},
     {path: 'login', component: LoginComponent},
 ];
+
