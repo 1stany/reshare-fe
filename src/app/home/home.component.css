@@ -19,6 +19,7 @@
     background: #86e600;
     color: rgb(0, 0, 0);
     font-weight: bold;
+    transform: scale(1.05);
 }
 
 .button-container {

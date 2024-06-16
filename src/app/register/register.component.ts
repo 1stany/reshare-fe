@@ -30,9 +30,11 @@ export class RegisterComponent {
 
     this.registerService.saveUser(currentUser).pipe(
       tap(() => {
+        alert('Registrazione effettuata');
         this.router.navigate(['']);
       }),
       catchError((error: any) => {
+        alert('Errore durante la registrazione');
         return of(null);
       })
     ).subscribe();

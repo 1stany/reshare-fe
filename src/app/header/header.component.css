@@ -3,11 +3,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid black;
-    margin-block-end: 5em;
+    margin-block-end: 10em;
     font-family: "Playwrite FR Moderne", cursive;
     font-optical-sizing: auto;
-
 }
 
 #logo{
@@ -16,9 +14,11 @@ header {
 
 nav{
     background:  rgba(7, 87, 0, 0.893);
-    color: #ce0707;
+    color: #ff0000;
     padding: 1rem 0;
     font-family: "Roboto";
+    font-size: large;
+    
 }
 
 .container {
@@ -34,10 +34,6 @@ nav{
     font-weight: bold;
 }
 
-.nav-links {
-    list-style: none;
-}
-
 .nav-links li {
     display: inline;
     margin-left: 1rem;
@@ -45,14 +41,20 @@ nav{
 
 .nav-links a {
     color: #fff;
-    text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
-.nav:hover{
-    color: #ff6600;
+
+.navbar-nav .nav-link:hover {
+    color: #003674; 
+    background-color: #00e727; 
+    border-radius: 4px; 
+    transition: all 0.3s ease; 
+    transform: scale(1.1);
+    font-size: 1.1rem;
 }
+
 
 .hero-content {
     color: #0015b4;
@@ -71,6 +73,3 @@ nav{
     margin-bottom: 2rem;
 }
 
-.container text-center {
-    margin: 0em;
-}
