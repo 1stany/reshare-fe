@@ -4,7 +4,7 @@
     padding: 20px 0;
     font-family: Arial, sans-serif;
     font-size: 0.7rem;
-    
+    margin-top: 15px;
 }
 
 .footer-container {
@@ -20,8 +20,6 @@
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
-
-
 
 .footer ul {
     list-style: none;

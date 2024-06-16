@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from './register.service';
 import { LoginInfo } from '../model/loginInfo';
 
@@ -17,10 +17,15 @@ export class LoginService {
     return from(this.http.post(this.apiUrl, loginInfo));
   }
 
+  createAuthorizationHeader(){
+    const token = localStorage.getItem('token');
+    if(token){
+      return new HttpHeaders({
+        'Authorization': 'Bearer ' + token
+        });
+    }
+    console.log("Jwt token Not Found")
+    return null;
+  }
+
 }
-
-
-
-  
-
-
