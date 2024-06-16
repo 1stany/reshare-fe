@@ -1,9 +1,28 @@
-<form (ngSubmit)="registerUser()">
-    <label>Username:</label>
-    <input type="text" ngModel="username">
-    <br>
-    <label>Password:</label>
-    <input type="password" ngModel="password">
-    <br>
-    <button type="submit">Register</button>
-  </form>
+
+  <h3>Registrazione</h3>
+  <div class="registerContainer">
+
+    <form #registerForm = "ngForm" (ngSubmit)="onSubmit(registerForm)">
+      <label>Name: <input type="text" name="firstname" required ngModel></label>
+      <label>Cognome: <input type="text" name="lastname" required ngModel></label>
+      <label>Email: <input type="text" name="email" required ngModel></label>
+      <label>Telefono: <input type="text" name="phone" required ngModel></label>
+
+      <label>Genere:</label>
+      <select name="gender" required ngModel>
+        <option value="male">Maschio</option>
+        <option value="female">Femmina</option>
+        <option value="Altro">Altro</option>
+      </select>
+
+      <label>Data di nascita: <input type="date" name="birthdate" required ngModel></label>
+
+      <label>Descrizione: <input type="text" name="description" required ngModel></label>
+      <label>Password: <input type="text" name="password" required ngModel></label>
+      
+      <button type="submit">Register</button>
+
+      
+    </form>
+</div>
+

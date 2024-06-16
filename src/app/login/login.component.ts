@@ -1,53 +1,36 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit} from '@angular/core';
-import { RouterModule} from '@angular/router';
+import { Component} from '@angular/core';
+import { Router} from '@angular/router';
 import { LoginService } from '../services/login.service';
+import { FormsModule, NgForm } from '@angular/forms';
+import { catchError, of, tap } from 'rxjs';
 
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterModule],
+  imports: [FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-//ng add @angular/material
-// Angular Material per i componenti dell'interfaccia utente
-export class LoginComponent implements OnInit {
-  email = '';
-  password = '';
-  token = '';
-  router: any;
 
-  constructor(private http : HttpClient, private loginService: LoginService){
-    this.loginService = loginService;
+export class LoginComponent {
+
+  constructor(private router: Router, private loginService: LoginService){}
+
+  onSubmit(ngForm : NgForm){
+
+    this.loginService.login(ngForm.value.email, ngForm.value.password).pipe(
+      tap(() => {
+        this.router.navigate(['']);
+      }),
+      catchError((error: any) => {
+        return of(null);
+      })
+    )
+    .subscribe();
   }
-
-  ngOnInit(): void {}
-
-  login(){
-    if (this.email.length > 0 && this.password.length > 0) {
-      // Invia la richiesta di login
-      this.loginService.login(this.email, this.password)
-      .subscribe((response: any) => {
-        // Gestisce la risposta del server
-        if (response.token) {
-          // Memorizza il token di autenticazione
-          localStorage.setItem('token', response.token);
-          // Reindirizza l'utente alla pagina di destinazione
-          this.router.navigate(['/']);
-        } else {
-          
-          alert('Credenziali non valide');
-        }
-      }, (error: any) => {
-        console.error(error);
-      });
-    } else {
-      alert('Inserisci un email e una password valide');
-    }
-  }
+ 
 }
 
 

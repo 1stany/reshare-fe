@@ -1,32 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { RegisterService, User } from '../services/register.service';
+import { FormsModule, NgForm } from "@angular/forms";
+import { catchError, of, tap } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
 
-export class RegisterComponent implements OnInit {
-  username!: string;
-  password!: string;
+export class RegisterComponent {
 
-  constructor(private register: Register) { }
+  constructor(private registerService: RegisterService, private router: Router) { }
 
-  ngOnInit(): void {
+  onSubmit(ngForm : NgForm){
+    const currentUser : User = {
+      firstname : ngForm.value.firstname,
+      lastname : ngForm.value.lastname,
+      email : ngForm.value.email,
+      phone : ngForm.value.phone,
+      gender: ngForm.value.gender,
+      birthdate: ngForm.value.birthdate,
+      description: ngForm.value.description,
+      password: ngForm.value.password,
+    }
+
+    this.registerService.saveUser(currentUser).pipe(
+      tap(() => {
+        this.router.navigate(['']);
+      }),
+      catchError((error: any) => {
+        return of(null);
+      })
+    ).subscribe();
   }
-
-  registerUser(): void {
-    this.registerService.registerUser(this.username, this.password).subscribe(
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
-}
-
 }

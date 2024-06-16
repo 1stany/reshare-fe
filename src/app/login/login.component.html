@@ -1,32 +1,8 @@
-<h1>Login</h1>
-
- <!-- TENTATIVO 1
-  <form (ngSubmit)="onSubmit()">
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" [email]="email" required>
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" ngModel="password" required>
-    </div>
-    <button type="submit">Accedi</button>
-  </form> -->
-
- <!--TENTATIVO 2-->
-<body>
-    <div class="container" id="loginContainer">
-        <h2>Login</h2>
-        <input type="email" id="loginEmail" placeholder="Email" required>
-        <input type="password" id="loginPassword" placeholder="Password" required>
-        <button onclick="login()">Login</button>
-        <p>Non hai un account? <a href="../register/register.component.html" onclick="register()">Registrati</a></p>
-    </div>
-    <div class="container" id="registerContainer" style="display: none;">
-        <h2>Registrazione</h2>
-        <input type="text" id="registerUsername" placeholder="Username" required>
-        <input type="email" id="registerEmail" placeholder="Email" required>
-        <input type="password" id="registerPassword" placeholder="Password" required>
-        <button onclick="register()">Registrati</button>
-        <p>Hai già un account? <a href="../login/login.component.html" onclick="login()">Accedi</a></p>
-    </div>
+<h2>Login</h2>
+<div class="loginContainer">
+  <form #loginForm = "ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <label>Email: <input type="text" name="email" required ngModel></label>
+    <label>Password: <input type="password" name="password" required ngModel></label>
+    <button type="submit">Login</button>
+  </form>
+</div>
