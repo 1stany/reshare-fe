@@ -3,6 +3,7 @@ import { Router} from '@angular/router';
 import { LoginService } from '../services/login.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { catchError, of, tap } from 'rxjs';
+import { LoginInfo } from '../model/loginInfo';
 
 
 
@@ -19,18 +20,22 @@ export class LoginComponent {
   constructor(private router: Router, private loginService: LoginService){}
 
   onSubmit(ngForm : NgForm){
-
-    this.loginService.login(ngForm.value.email, ngForm.value.password).pipe(
-      tap(() => {
-        this.router.navigate(['']);
-      }),
-      catchError((error: any) => {
-        return of(null);
-      })
-    )
-    .subscribe();
+    const loginInfo : LoginInfo = {
+      email : ngForm.value.email,
+      password: ngForm.value.password,
+    }
+    this.loginService.login(loginInfo).subscribe({
+      next: (response) => {
+        console.log(response);
+        localStorage.setItem('token', response.token);
+        alert('Login effettuata');
+      },
+      error: err => {
+        console.log(err); 
+        alert('Errore durante il login');
+      },
+    });
   }
- 
 }
 
 
