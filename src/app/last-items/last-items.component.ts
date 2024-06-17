@@ -10,14 +10,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './last-items.component.css'
 })
 
-
-//   export enum Params {
-//   param1 = '',
-//   param2 = true,
-//   param3 = ''
-// }
-
-
 export class LastItemsComponent implements OnInit{
   items : Item[] = [];
   pars : [boolean, number] = [true, 10];

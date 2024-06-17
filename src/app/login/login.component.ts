@@ -28,8 +28,7 @@ export class LoginComponent {
       next: (response) => {
         console.log(response);
         localStorage.setItem('token', response.token);
-        this.loginService.createAuthorizationHeader();
-        alert('Login effettuata');
+        this.router.navigate(['']);
       },
       error: err => {
         console.log(err); 
