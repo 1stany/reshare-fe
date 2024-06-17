@@ -14,7 +14,7 @@
     <span><button type="button" class="btn btn-secondary" routerLink= "/last">Indietro</button></span>
     <span>
         @if (item?.activetrade) {
-            <button id="trade" class="btn btn-success" routerLink="/trade-offer">Scambia</button>
+            <button id="trade" class="btn btn-success" [routerLink]="['/trade-offer',item?.id]">Scambia</button>
         }
     </span>
 </div>

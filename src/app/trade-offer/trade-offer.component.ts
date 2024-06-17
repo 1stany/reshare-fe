@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './trade-offer.component.css'
 })
 export class TradeOfferComponent {
-
+  //metodo con nome oggetto, id e id e nome proprietario
 }
