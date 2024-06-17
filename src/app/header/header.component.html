@@ -6,12 +6,12 @@
         <div class="container text-left m-3">
             <div class="row">
               <div class="col-sm-5 p-0">
-                <img src="/imgs/logo.jpg" alt="logo" id="logo">
+                <img src="/imgs/logo.jpg"  class="img-thumbnail" alt="logo" id="logo">
               </div>
               <div class="col-sm-6">
                 <div class="row">
                   <div class="col-8 col-sm-10">
-                    <h1>Welcome to Reshare</h1>
+                    <h1>Benvenuto su Reshare</h1>
                   </div></div>
                   <div class="col-4 col-sm-11">
                     <p>Exchange items with your community easily and efficiently.</p>
@@ -23,31 +23,22 @@
 
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" routerLink="">Home</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="last">Ultimi Aggiunti</a>
+                    <a class="nav-link active" routerLink="">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" routerLink="register">Registrazione</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" routerLink="login" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      login
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" routerLink="#">Action</a></li>
-                      <li><a class="dropdown-item" routerLink="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" routerLink="#">Something else here</a></li>
-                    </ul>
+                    <a class="nav-link active" routerLink="last">Ultimi Aggiunti</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    <a class="nav-link active" routerLink="register">Registrazione</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" routerLink="login">Login</a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">

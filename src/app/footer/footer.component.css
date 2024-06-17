@@ -1,5 +1,5 @@
 .footer {
-    background-color: rgba(0, 39, 87, 0.893);
+    background-color:  rgba(8, 65, 2, 0.784);
     color: #fff;
     padding: 20px 0;
     font-family: Arial, sans-serif;
@@ -19,6 +19,8 @@
 .footer h2 {
     font-size: 0.9rem;
     margin-bottom: 10px;
+    font-family: "Playwrite FR Moderne";
+    font-weight: 2%;
 }
 
 .footer ul {
@@ -69,4 +71,8 @@
 
 .footer-links {
     text-align: center;
+}
+
+#designBy{
+    font-family: "Playwrite FR Moderne";
 }

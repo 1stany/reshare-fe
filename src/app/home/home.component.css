@@ -17,7 +17,7 @@
 
 .btn:hover {
     background: #86e600;
-    color: rgb(0, 0, 0);
+    color: #080075;
     font-weight: bold;
     transform: scale(1.05);
 }
