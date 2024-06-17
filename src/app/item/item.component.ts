@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ItemService } from '../services/item.service';
 import { Item } from '../model/item.model';
-import { TradeService } from '../services/trade.service';
+import { SharedItemService } from '../services/shared-item.service';
 
 @Component({
   selector: 'app-item',
@@ -16,18 +16,20 @@ export class ItemComponent implements OnInit{
 
   item : Item | undefined;
 
-  constructor(private itemService : ItemService, private route : ActivatedRoute, private tradeService: TradeService) { }
+  constructor(private itemService : ItemService, private route : ActivatedRoute, private sharedItemService: SharedItemService) { }
   
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get("id");
     if(id){
       this.itemService.getItem(+id).subscribe(i => this.item = i);
+      this.updateSharedItem();
     }
+    
   }
 
   updateSharedItem(){
-    this.tradeService.setItem(this.item!);
+    this.sharedItemService.setItem(this.item!);
   }
 
   

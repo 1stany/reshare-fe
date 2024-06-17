@@ -4,7 +4,7 @@ import { Item } from '../model/item.model';
 @Injectable({
   providedIn: 'root'
 })
-export class TradeService {
+export class SharedItemService {
   private item: Item | undefined;
   
   constructor() { }
