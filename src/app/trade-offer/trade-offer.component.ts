@@ -21,7 +21,11 @@ export class TradeOfferComponent implements OnInit{
 
   
   ngOnInit(): void {
-    this.item = this.getSharedItem();
+    const id = this.route.snapshot.paramMap.get('itemId');
+    console.log(id);
+    if(id){
+      this.itemService.getItem(+id).subscribe((item) => (this.item = item));
+    }
     this.userService.getItems().subscribe((i : Item[]) => (this.items=i));
   }
 

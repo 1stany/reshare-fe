@@ -11,6 +11,6 @@ export class UserService {
   constructor(private http : HttpClient) { }
 
   getItems() : Observable<Item[]> {
-    return this.http.get<Item[]>(this.apiUrl, );
+    return this.http.get<Item[]>(this.apiUrl);
   }
 }
