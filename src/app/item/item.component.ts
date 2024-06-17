@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
-import { Item, ItemService } from '../services/item.service';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { ItemService } from '../services/item.service';
+import { Item } from '../model/item.model';
+import { TradeService } from '../services/trade.service';
 
 @Component({
   selector: 'app-item',
@@ -12,8 +14,10 @@ import { Item, ItemService } from '../services/item.service';
 
 export class ItemComponent implements OnInit{
 
-  constructor(private itemService : ItemService, private route : ActivatedRoute) { }
   item : Item | undefined;
+
+  constructor(private itemService : ItemService, private route : ActivatedRoute, private tradeService: TradeService) { }
+  
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get("id");
@@ -21,4 +25,13 @@ export class ItemComponent implements OnInit{
       this.itemService.getItem(+id).subscribe(i => this.item = i);
     }
   }
+
+  updateSharedItem(){
+    this.tradeService.setItem(this.item!);
+  }
+
+  
+
+  
+
 }

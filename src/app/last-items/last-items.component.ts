@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LastItemsService, Item } from '../services/last-items.service';
+import { LastItemsService} from '../services/last-items.service';
 import { RouterModule } from '@angular/router';
+import { Item } from '../model/item.model';
 
 @Component({
   selector: 'app-last-items',

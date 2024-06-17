@@ -1,18 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Item } from './item.service';
+import { Item } from '../model/item.model';
 
-// export interface Item{
-//   id : number;
-//   name : string;
-//   description : string;
-//   activetrade : boolean;
-//   condition : string;
-//   conditionComment : string;
-//   categoryName : string;
-//   creationDate : string;
-// }
+
 
 @Injectable({
   providedIn: 'root'
@@ -33,4 +24,4 @@ export class LastItemsService {
 
 }
 
-export { Item };
+
