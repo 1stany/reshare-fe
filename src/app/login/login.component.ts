@@ -28,6 +28,7 @@ export class LoginComponent {
       next: (response) => {
         console.log(response);
         localStorage.setItem('token', response.token);
+        localStorage.setItem('userEmail', ngForm.value.email);
         this.router.navigate(['']);
       },
       error: err => {

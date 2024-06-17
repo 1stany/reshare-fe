@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LastItemsService} from '../services/last-items.service';
 import { RouterModule } from '@angular/router';
 import { Item } from '../model/item.model';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-last-items',
@@ -14,8 +15,8 @@ import { Item } from '../model/item.model';
 export class LastItemsComponent implements OnInit{
   items : Item[] = [];
   pars : [boolean, number] = [true, 10];
-  constructor(private lastItemsService : LastItemsService){}
+  constructor(private lastItemsService : LastItemsService, private userService : UserService){}
   ngOnInit(): void {
-    this.lastItemsService.getLastItems(this.pars).subscribe((i: Item[]) => (this.items = i));
+    this.lastItemsService.getLastItems(this.pars).subscribe((is: Item[]) => (this.items = is.filter(i=>i.ownerEmail!=localStorage.getItem('userEmail'))));
   }
 }

@@ -9,4 +9,5 @@ export interface Item{
     ownerCityName : string;
     ownerName : string;
     creationDate : string;
+    ownerEmail : string;
   }

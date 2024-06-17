@@ -8,6 +8,7 @@
                 <th>Categoria</th>
                 <th>Città</th>
                 <th>Data</th>
+                <th>Proprietario</th>
                 <th></th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
                     <td>{{i.categoryName}}</td> 
                     <td>{{i.ownerCityName}}</td> 
                     <td>{{i.creationDate}}</td>
+                    <td>{{i.ownerName}}</td>
                     <td><button type="button" class="btn btn-outline-success" [routerLink] = "['/item', i.id]">mostra dettagli</button></td>  
                 </tr>
             }

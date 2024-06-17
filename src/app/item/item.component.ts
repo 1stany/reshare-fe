@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ItemService } from '../services/item.service';
 import { Item } from '../model/item.model';
-import { SharedItemService } from '../services/shared-item.service';
 
 @Component({
   selector: 'app-item',
@@ -16,7 +15,7 @@ export class ItemComponent implements OnInit{
 
   item : Item | undefined;
 
-  constructor(private itemService : ItemService, private route : ActivatedRoute, private sharedItemService: SharedItemService) { }
+  constructor(private itemService : ItemService, private route : ActivatedRoute) { }
   
 
   ngOnInit(): void {
