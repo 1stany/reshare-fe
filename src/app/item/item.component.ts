@@ -23,17 +23,7 @@ export class ItemComponent implements OnInit{
     const id = this.route.snapshot.paramMap.get("id");
     if(id){
       this.itemService.getItem(+id).subscribe(i => this.item = i);
-      this.updateSharedItem();
     }
-    
   }
-
-  updateSharedItem(){
-    this.sharedItemService.setItem(this.item!);
-  }
-
-  
-
-  
 
 }
