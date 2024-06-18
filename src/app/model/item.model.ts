@@ -6,8 +6,8 @@ export interface Item{
     condition : string;
     conditionComment? : string;
     categoryName : string;
-    creationDate : string;
-    ownerCityName : string;
-    ownerName : string;
+    creationDate? : string;
+    ownerCityName? : string;
+    ownerName? : string;
     ownerEmail : string;
   }

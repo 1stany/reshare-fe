@@ -9,12 +9,12 @@
     </div>
     <div class="form-group">
       <label>Pronto per lo scambio: 
-        <div>
+        <span>
             <input type="radio" name="activetrade" value="true" required ngModel> Sì
-        </div>
-        <div>
+        </span>
+        <span>
             <input type="radio" name="activetrade" value="false" required ngModel> No
-        </div>
+        </span>
       </label>
     </div>
     <div class="form-group">
@@ -23,17 +23,18 @@
           <option value="comenuovo">Come nuovo</option>
           <option value="ottimo">Ottimo</option>
           <option value="buono">Buono</option>
-          <option value="accettabile">accettabile</option>
+          <option value="accettabile">Accettabile</option>
         </select>
       </div>
     <div class="form-group">
-      <label>Aggiungi un commento allo stato: <input type="text" name="conditionComment"></label>
+      <label>Aggiungi un commento allo stato: <input type="text" name="conditionComment" required ngModel></label>
     </div>
     <div class="form-group">
         <label>Categoria:</label>
         <select name="categoryName" required ngModel>
           <option value="elettronica">Elettronica</option>
           <option value="giardinaggio">Giardinaggio</option>
+          <option value="casa">Casa</option>
         </select>
       </div>
     <div class="form-group">

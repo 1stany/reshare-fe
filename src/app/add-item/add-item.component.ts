@@ -19,30 +19,21 @@ import { DatePipe } from '@angular/common';
 export class AddItemComponent {
   user : User | undefined;
   fullItem : FullItem | undefined;
-  constructor(private datePipe: DatePipe, private userService: UserService, private addItemService : AddItemService, private router: Router) { }
+  constructor( private userService: UserService, private addItemService : AddItemService, private router: Router) { }
 
   onSubmit(ngForm : NgForm){
-    const itemFromForm :ItemForm = {
+    const currentItem :Item = {
       name : ngForm.value.name,
       description : ngForm.value.description,
       activetrade : ngForm.value.activetrade,
       condition : ngForm.value.condition,
       conditionComment : ngForm.value.conditionComment,
       categoryName : ngForm.value.categoryName,
-      creationDate : this.datePipe.transform(new Date(), 'dd-MMM-uuuu')!
+      creationDate : new Date().toISOString().split('T')[0],
+      ownerEmail: localStorage.getItem('userEmail')! //this.datePipe.transform(new Date(), 'dd-MMM-uuuu')!
     };
-    
-    this.userService.getUserDetails().subscribe(u=>this.user = u);
-    const fullname: string = this.user!.firstname + " " + this.user!.lastname;
 
-    const fullItem: FullItem = {
-      addItemForm : itemFromForm,
-      ownerCityName : this.user!.city,
-      ownerName : fullname,
-      ownerEmail : this.user!.email
-    }
-
-    this.addItemService.saveItem(fullItem).subscribe({
+    this.addItemService.saveItem(currentItem).subscribe({
       next: (resp)=>this.router.navigate(['']), //implementare con la lista degli oggetti per user
       error: (er)=>{
         console.log(er);
