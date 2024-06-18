@@ -22,7 +22,7 @@
                     <td>{{i.categoryName}}</td>  
                     <td>{{i.creationDate}}</td>
                     @if(i.activetrade){
-                    <td><button type="button" class="btn btn-outline-success" [routerLink] = "['/item', i.id]">seleziona</button></td>
+                    <td><button type="button" class="btn btn-outline-success" (click)="goToTradeAdd(i, item!)">seleziona</button></td>
                     } @else {
                         <td></td>
                     }
