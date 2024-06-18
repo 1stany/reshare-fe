@@ -4,7 +4,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { Item } from '../model/item.model';
 import { AddItemService } from '../services/add-item.service';
 import { ItemForm } from '../model/item-form.model';
-import { FullItem } from '../model/full-item';
+import { FullItem } from '../model/full-item.model';
 import { UserService } from '../services/user.service';
 import { User } from '../model/user.model';
 import { DatePipe } from '@angular/common';

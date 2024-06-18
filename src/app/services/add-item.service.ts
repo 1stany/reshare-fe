@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Item } from '../model/item.model';
-import { FullItem } from '../model/full-item';
+import { FullItem } from '../model/full-item.model';
 
 @Injectable({
   providedIn: 'root'
