@@ -5,7 +5,7 @@ import { ItemComponent } from './item/item.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TradeOfferComponent } from './trade-offer/trade-offer.component';
-import { AddItemComponent } from './add-item/add-item.component';
+import { TradeAddComponent } from './trade-add/trade-add.component';
 
 
 export const routes: Routes = [
@@ -15,6 +15,6 @@ export const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'trade-offer/:itemId', component: TradeOfferComponent},
-    {path: 'add-item', component: AddItemComponent}
+    {path: 'trade-add', component: TradeAddComponent},
 ];
 
