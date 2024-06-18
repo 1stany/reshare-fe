@@ -24,6 +24,7 @@ export class RegisterComponent {
       lastname: ngForm.value.lastname,
       email: ngForm.value.email,
       phone: ngForm.value.phone,
+      city: ngForm.value.city,
       gender: ngForm.value.gender,
       birthdate: ngForm.value.birthdate,
       description: ngForm.value.description

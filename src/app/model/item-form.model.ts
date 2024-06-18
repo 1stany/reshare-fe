@@ -1,13 +1,10 @@
-export interface Item{
+export interface ItemForm{
     id? : number;
     name : string;
     description : string;
     activetrade : boolean;
     condition : string;
-    conditionComment? : string;
+    conditionComment : string;
     categoryName : string;
     creationDate : string;
-    ownerCityName : string;
-    ownerName : string;
-    ownerEmail : string;
   }

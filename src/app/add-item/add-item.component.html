@@ -1,0 +1,43 @@
+<h3>Aggiungi un nuovo oggetto</h3>
+<div class="registerContainer">
+  <form #addItemForm="ngForm" (ngSubmit)="onSubmit(addItemForm)">
+    <div class="form-group">
+      <label>Nome: <input type="text" name="name" required ngModel></label>
+    </div>
+    <div class="form-group">
+      <label>Descrizione: <input type="text" name="description" required ngModel></label>
+    </div>
+    <div class="form-group">
+      <label>Pronto per lo scambio: 
+        <div>
+            <input type="radio" name="activetrade" value="true" required ngModel> Sì
+        </div>
+        <div>
+            <input type="radio" name="activetrade" value="false" required ngModel> No
+        </div>
+      </label>
+    </div>
+    <div class="form-group">
+        <label>Stato:</label>
+        <select name="condition" required ngModel>
+          <option value="comenuovo">Come nuovo</option>
+          <option value="ottimo">Ottimo</option>
+          <option value="buono">Buono</option>
+          <option value="accettabile">accettabile</option>
+        </select>
+      </div>
+    <div class="form-group">
+      <label>Aggiungi un commento allo stato: <input type="text" name="conditionComment"></label>
+    </div>
+    <div class="form-group">
+        <label>Categoria:</label>
+        <select name="categoryName" required ngModel>
+          <option value="elettronica">Elettronica</option>
+          <option value="giardinaggio">Giardinaggio</option>
+        </select>
+      </div>
+    <div class="form-group">
+      <button type="submit">Crea!</button>
+    </div>
+  </form>
+</div>
