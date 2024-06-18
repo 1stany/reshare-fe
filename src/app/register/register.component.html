@@ -2,25 +2,25 @@
 <div class="registerContainer">
   <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
     <div class="form-group">
-      <label>Name: <input type="text" name="firstname" required ngModel></label>
+      <label>*Nome: <input type="text" name="firstname" required ngModel></label>
     </div>
     <div class="form-group">
-      <label>Cognome: <input type="text" name="lastname" required ngModel></label>
+      <label>*Cognome: <input type="text" name="lastname" required ngModel></label>
     </div>
     <div class="form-group">
-      <label>Email: <input type="email" name="email" required ngModel></label>
+      <label>*Email: <input type="email" name="email" required ngModel></label>
     </div>
     <div class="form-group">
-      <label>Telefono: <input type="tel" name="phone" required ngModel></label>
+      <label>Telefono: <input type="tel" name="phone" ngModel></label>
     </div>
     <div class="form-group">
-      <label>Città:</label>
+      <label>*Città:</label>
       <select name="city" required ngModel>
         <option value="city">Roma</option>
       </select>
     </div>
     <div class="form-group">
-      <label>Genere:</label>
+      <label>*Genere:</label>
       <select name="gender" required ngModel>
         <option value="male">Maschio</option>
         <option value="female">Femmina</option>
@@ -28,13 +28,13 @@
       </select>
     </div>
     <div class="form-group">
-      <label>Data di nascita: <input type="date" name="birthdate" required ngModel></label>
+      <label>*Data di nascita: <input type="date" name="birthdate" required ngModel></label>
     </div>
     <div class="form-group">
-      <label>Password: <input type="password" name="password" required ngModel></label>
+      <label>*Password: <input type="password" name="password" required ngModel></label>
     </div>
     <div>
-      <label>Descrizione: <input type="text" id="description" name="description" required ngModel></label>
+      <label>Descrizione: <input type="text" id="description" name="description" ngModel></label>
     </div>
     <div>
       <button type="submit">REGISTRATI!</button>
