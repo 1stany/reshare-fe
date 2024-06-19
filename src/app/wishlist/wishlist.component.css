@@ -63,12 +63,11 @@
     font-weight: bold;
     margin-bottom: 5px;
   }
-  
 
   #aggiungi {
     display: block;
     margin: 20px auto;
-    background: linear-gradient(135deg,  #43b600a3, rgba(7, 84, 0, 0.893));
+    background-color: #132d83;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -79,7 +78,7 @@
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: "Playwrite FR Moderne";
+    font-family: 'Arial', sans-serif;
     margin-top: 20px;
     }
 
@@ -94,8 +93,11 @@
 
   .wishlistContainer{
     display: flex;
-    align-items: center
-    ;
+    align-items: center;
+  }
+
+  .btn{
+    font-family: "Playwrite FR Moderne", cursive;
   }
 
   .table tbody tr:last-child td:first-child {
