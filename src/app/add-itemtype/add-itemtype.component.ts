@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, NgForm, Validators } from '@angular/forms';
 import { ItemType } from '../model/itemtype.model';
 import { WishlistService } from '../services/wishlist.service';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-add-itemtype',
@@ -19,15 +20,16 @@ constructor(private formBuilder : FormBuilder, private wishlistService: Wishlist
   
   
   ngOnInit(): void {
-    this.typeForm = this.formBuilder.group({
-      name : ['', Validators.required],
-      description : ['', Validators.required],
-      categoryName : ['', Validators.required]
-    })
+    
   }
 
-  onSubmit(){
-
+  onSubmit(ngForm : NgForm){
+    const currentItemType : ItemType = {
+      name: ngForm.value.name,
+      description: ngForm.value.description,
+      categoryName: ngForm.value.categoryName,
+      dateAdded: ''
+    }
   }
   
 

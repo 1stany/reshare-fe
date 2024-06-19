@@ -1,18 +1,21 @@
-<h2>Aggiungi la tipologia di prodotto!</h2>
+<div id="newType"><h3>Aggiungi tipologia di prodotto!</h3></div>
+<div class="registerContainer">
 <form #addItemTypeForm="ngForm" (ngSubmit)="onSubmit(addItemTypeForm)">
-    <div>
-        <label>Nome</label>
-        <input type="text" id="name">
-    </div>
-    <div>
-        <label>Descrizione</label>
-        <input type="text" id="name">
-    </div>
-    <div>
-        <label></label>
-        <input type="text" id="name">
-    </div>
-
-
-
+    <div class="form-group">
+        <label>*Nome: <input type="text" name="name" required ngModel></label>
+      </div>
+      <div class="form-group">
+        <label>*Descrizione: <input type="text" name="description" required ngModel></label>
+      </div>
+      <div class="form-group">
+          <label>*Categoria:</label>
+          <select name="categoryName" required ngModel>
+            <option value="elettronica">Elettronica</option>
+            <option value="giardinaggio">Giardinaggio</option>
+          </select>
+        </div>
+      <div class="form-group">
+        <button type="submit">AGGIUNGI!</button>
+      </div>
 </form>
+</div>
