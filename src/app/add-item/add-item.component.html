@@ -5,6 +5,7 @@
     <div class="form-group">
       <label>*Nome: <input type="text" name="name" required ngModel></label>
     </div>
+
     <div class="form-group">
       <label>*Categoria:</label>
       <select name="categoryName" required ngModel>
@@ -13,6 +14,18 @@
         <option value="casa">Casa</option>
       </select>
     </div>
+
+    <div class="form-group">
+      <label id="activetrade">*Pronto per lo scambio: 
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="activetrade" id="si" autocomplete="off" checked>
+            <label class="btn btn-outline-light" for="si">Sì</label>
+            <input type="radio" class="btn-check" name="activetrade" id="no" autocomplete="off">
+            <label class="btn btn-outline-secondary " for="no">No</label>
+          </div>    
+      </label>
+    </div>
+
     <div class="form-group">
       <label>*Stato:</label>
       <select name="condition" required ngModel>
@@ -21,39 +34,34 @@
         <option value="buono">Buono</option>
         <option value="accettabile">Accettabile</option>
       </select>
-    <div class="form-group">
-      <label id="activetrade">*Pronto per lo scambio: 
-        <span>
-            <input type="radio" name="activetrade" value="true" required ngModel> Sì
-        </span>
-        <span>
-            <input type="radio" name="activetrade" value="false" required ngModel> No
-        </span>
-      </label>
-    </div>
-  </div>
-  <div class="form-group">
+    </div>  
+
+  <div>
     <label id="description">*Descrizione: <input type="text" name="description" required ngModel></label>
   </div>
-    <div class="form-group">
+    <div>
       <label>Aggiungi un commento allo stato: <input type="text" name="conditionComment" ngModel></label>
     </div>
-    <div class="form-group">
+
+    <div>
+  <div class="form-group">
       <button id="submit" type="submit">CREA!</button>
-    </div>
-  </form>
+  </div></div>
+  </form>    
+
 </div>
 }
 @if(isSubmitted){
 <div id="alert" class="alert alert" role="alert">
-  <h4 class="alert-heading">Hai aggiunto un oggetto</h4>
+  <h4 class="alert-heading">Oggetto creato!</h4>
+  <h6>il tuo oggetto è entrato a fare parte del nostro circuito del riuso</h6>
   <p id="alertext">Grazie al tuo impegno, hai contribuito alla sostenibilità e alla protezione del nostro pianeta. Continuando così, insieme possiamo fare la differenza per un futuro migliore!</p>
   <hr>
   <div class="mb-0">
-    <div><button type="button" class="btn btn-success" routerLink= "">I MIEI OGGETTI</button></div>
+    <div><button type="button" id="myobj" class="btn btn-success" routerLink= "">I MIEI OGGETTI</button></div>
   </div>
   <div class="mb-0">
-    <div><button type="button" class="btn btn-secondary" routerLink= "">HOME</button></div>
+    <div><button type="button" id="home" class="btn btn-secondary" routerLink= "">HOME</button></div>
   </div>
 </div>
 }

@@ -7,12 +7,11 @@ import { ItemForm } from '../model/item-form.model';
 import { FullItem } from '../model/full-item.model';
 import { UserService } from '../services/user.service';
 import { User } from '../model/user.model';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-add-item',
   standalone: true,
-  imports: [FormsModule, DatePipe],
+  imports: [FormsModule, RouterModule],
   templateUrl: './add-item.component.html',
   styleUrl: './add-item.component.css'
 })
