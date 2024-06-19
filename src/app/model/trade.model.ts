@@ -8,7 +8,7 @@ export interface Trade{
      exchangedItemName?: String,
      homeUserFullName?: String,
      requestedItemId: number,
-     requestingUserId: number,
+     requestingUserEmail: string,
      exchangedItemId: number,
-     homeUserId: number
+     homeUserEmail: string
 }

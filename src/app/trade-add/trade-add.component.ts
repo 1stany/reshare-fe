@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { TradeService } from '../services/trade.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { OfferItemTradeService } from '../services/offer-item-trade.service';
 import { Item } from '../model/item.model';
+import { Trade } from '../model/trade.model';
 
 @Component({
   selector: 'app-trade-add',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './trade-add.component.html',
   styleUrl: './trade-add.component.css'
 })
@@ -34,6 +35,29 @@ export class TradeAddComponent implements OnInit{
       next: (i) => {
         this.requestedItem = i;
         console.log(this.requestedItem)
+      }
+    });
+  }
+
+  onSubmit(ngForm : NgForm){
+    const currentTrade: Trade ={
+    requestDate: new Date().toISOString().split('T')[0] ,
+    accepted: false,
+    exchangeDate: ngForm.value.exchangeDate,
+    requestedItemId: this.requestedItem?.id!,
+    exchangedItemId: this.item?.id!,
+    requestingUserEmail: this.requestedItem?.ownerEmail!,
+    homeUserEmail: this.item?.ownerEmail!
+  }
+    
+    this.tradeService.saveTrade(currentTrade).subscribe({
+      next: (resp)=>{
+        this.router.navigate(['']), 
+        console.log(currentTrade)
+      },
+      error: (er)=>{
+        console.log(er);
+        alert('Errore durante invio della richiesta');
       }
     });
   }
