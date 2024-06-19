@@ -1,3 +1,4 @@
+@if(!isSubmitted){
 <div id="newObj"><h3>Aggiungi un nuovo oggetto</h3></div>
 <div class="registerContainer">
   <form #addItemForm="ngForm" (ngSubmit)="onSubmit(addItemForm)">
@@ -5,10 +6,23 @@
       <label>*Nome: <input type="text" name="name" required ngModel></label>
     </div>
     <div class="form-group">
-      <label>*Descrizione: <input type="text" name="description" required ngModel></label>
+      <label>*Categoria:</label>
+      <select name="categoryName" required ngModel>
+        <option value="elettronica">Elettronica</option>
+        <option value="giardinaggio">Giardinaggio</option>
+        <option value="casa">Casa</option>
+      </select>
     </div>
     <div class="form-group">
-      <label>*Pronto per lo scambio: 
+      <label>*Stato:</label>
+      <select name="condition" required ngModel>
+        <option value="comenuovo">Come nuovo</option>
+        <option value="ottimo">Ottimo</option>
+        <option value="buono">Buono</option>
+        <option value="accettabile">Accettabile</option>
+      </select>
+    <div class="form-group">
+      <label id="activetrade">*Pronto per lo scambio: 
         <span>
             <input type="radio" name="activetrade" value="true" required ngModel> Sì
         </span>
@@ -17,28 +31,29 @@
         </span>
       </label>
     </div>
-    <div class="form-group">
-        <label>*Stato:</label>
-        <select name="condition" required ngModel>
-          <option value="comenuovo">Come nuovo</option>
-          <option value="ottimo">Ottimo</option>
-          <option value="buono">Buono</option>
-          <option value="accettabile">Accettabile</option>
-        </select>
-      </div>
+  </div>
+  <div class="form-group">
+    <label id="description">*Descrizione: <input type="text" name="description" required ngModel></label>
+  </div>
     <div class="form-group">
       <label>Aggiungi un commento allo stato: <input type="text" name="conditionComment" ngModel></label>
     </div>
     <div class="form-group">
-        <label>*Categoria:</label>
-        <select name="categoryName" required ngModel>
-          <option value="elettronica">Elettronica</option>
-          <option value="giardinaggio">Giardinaggio</option>
-          <option value="casa">Casa</option>
-        </select>
-      </div>
-    <div class="form-group">
-      <button type="submit">CREA!</button>
+      <button id="submit" type="submit">CREA!</button>
     </div>
   </form>
 </div>
+}
+@if(isSubmitted){
+<div id="alert" class="alert alert" role="alert">
+  <h4 class="alert-heading">Hai aggiunto un oggetto</h4>
+  <p id="alertext">Grazie al tuo impegno, hai contribuito alla sostenibilità e alla protezione del nostro pianeta. Continuando così, insieme possiamo fare la differenza per un futuro migliore!</p>
+  <hr>
+  <div class="mb-0">
+    <div><button type="button" class="btn btn-success" routerLink= "">I MIEI OGGETTI</button></div>
+  </div>
+  <div class="mb-0">
+    <div><button type="button" class="btn btn-secondary" routerLink= "">HOME</button></div>
+  </div>
+</div>
+}
