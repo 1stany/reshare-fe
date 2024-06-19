@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { TradeOfferComponent } from './trade-offer/trade-offer.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { AddItemtypeComponent } from './add-itemtype/add-itemtype.component';
+import { DeleteItemtypeComponent } from './delete-itemtype/delete-itemtype.component';
 
 
 export const routes: Routes = [
@@ -18,5 +19,7 @@ export const routes: Routes = [
     {path: 'trade-offer/:itemId', component: TradeOfferComponent},
     {path: 'wishlist', component: WishlistComponent},
     {path: 'add-itemtype', component: AddItemtypeComponent},
+    {path: 'delete-itemtype/:id', component: DeleteItemtypeComponent},
+
 ];
 

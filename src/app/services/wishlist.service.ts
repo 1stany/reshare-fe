@@ -19,7 +19,7 @@ export class WishlistService {
     return this.http.post(`${this.apiUrl}/user/itemType`, itemType);
   }
 
-  removeItemTypeById(userId: number, itemTypeId: number): Observable<any> {
+  removeItemTypeById(itemTypeId: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/user/itemType/${itemTypeId}`);
   }
 

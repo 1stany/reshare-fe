@@ -11,7 +11,7 @@ import { LoginService } from '../services/login.service';
 @Component({
   selector: 'app-wishlist',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './wishlist.component.html',
   styleUrl: './wishlist.component.css'
 })
