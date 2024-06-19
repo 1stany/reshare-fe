@@ -1,5 +1,5 @@
 <h2>Aggiungi la tipologia di prodotto!</h2>
-<form [formGroup]="typeForm" (ngSubmit)="onSubmit">
+<form #addItemTypeForm="ngForm" (ngSubmit)="onSubmit(addItemTypeForm)">
     <div>
         <label>Nome</label>
         <input type="text" id="name">
