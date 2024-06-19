@@ -86,3 +86,30 @@
   #intestation {
     font-family: "Playwrite FR Moderne"
   }
+
+  #prova {
+    display: flex;
+    
+  }
+
+  .wishlistContainer{
+    display: flex;
+    align-items: center
+    ;
+  }
+
+  .table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px; 
+}
+
+.table tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0; 
+}
+
+.table th:first-child {
+    border-radius: 10px 0 0 0; 
+}
+
+.table th:last-child {
+    border-radius: 0 10px 0 0;
+}
