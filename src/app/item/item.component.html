@@ -1,5 +1,5 @@
 <div class="m-4">
-    <div id="dettagli">Dettaglio oggetto</div>
+    <div id="dettagli">Dettagli oggetto</div>
     <div id="table">
         <table class="table table-striped-columns">
             <tbody>
@@ -15,7 +15,7 @@
         </table>  
     </div>
     <div><span class="change">
-        <span><button id="trade" class="btn btn-secondary" routerLink= "/last">Indietro</button></span>
+        <span><button id="trade" class="btn btn-secondary btn-hover2" routerLink= "/last">Indietro</button></span>
         
             @if (item?.activetrade) {
                 <button id="trade" class="btn btn-success btn-hover" [routerLink]="['/trade-offer',item?.id]">Scambia</button>

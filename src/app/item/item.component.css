@@ -26,19 +26,18 @@ tbody {
       }
 
 .table {
-        flex: 1;
+        display: flex;
+        justify-content: center;
       }
 
 .btn-hover:hover {
     background-color: #21df2a;
     color: black;
-    transform: scale(1.05);
+    transform: scale(1.1);
     transition: background-color 0.3s, transform 0.3s; 
 }
 
-.table-striped-columns td:first-child {
-    width: 50%; 
-}
-.table-striped-columns td:last-child {
-    width: 50%; 
+.btn-hover2:hover{
+    transform: scale(1.08);
+    transition: background-color 0.3s, transform 0.3s; 
 }
