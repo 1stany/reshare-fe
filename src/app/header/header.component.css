@@ -1,9 +1,9 @@
 header {
-    height: 35vh;
+    height: 42vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-block-end: 10em;
+    margin-block-end: 4em;
     font-family: "Playwrite FR Moderne", cursive;
     font-optical-sizing: auto;
 }
