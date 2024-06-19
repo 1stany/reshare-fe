@@ -1,17 +1,14 @@
 header {
-    height: 60vh;
+    height: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-block-end: 4em;
     font-family: "Playwrite FR Moderne", cursive;
     font-optical-sizing: auto;
-    margin-bottom: 40px;
+    margin-bottom: 90px;
 }
 
-.hero {
-    
-}
 
 #logo{
     width: 20em;
