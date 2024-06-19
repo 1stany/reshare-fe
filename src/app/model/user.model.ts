@@ -3,9 +3,9 @@ export interface User {
     firstname:string,
     lastname:string,
     email:string,
-    phone:string,
+    phone?:string,
     gender:string,
     birthdate:string,
     description:string,
-    city: string
+    cityName: string
 }

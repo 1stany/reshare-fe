@@ -9,6 +9,10 @@ header {
     margin-bottom: 90px;
 }
 
+h1 {
+    padding-top: 30px;
+    margin-bottom: 6em;
+}
 
 #logo{
     width: 20em;
