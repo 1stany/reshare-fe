@@ -16,6 +16,7 @@ import { Trade } from '../model/trade.model';
 export class TradeAddComponent implements OnInit{
   item: Item | undefined;
   requestedItem : Item | undefined;
+  isSubmitted : boolean = false;
 
   constructor(private tradeService: TradeService, private router: Router, private route : ActivatedRoute, private offerItemTradeService : OfferItemTradeService){
     const navigation = this.router.getCurrentNavigation();
@@ -49,10 +50,12 @@ export class TradeAddComponent implements OnInit{
     requestingUserEmail: this.requestedItem?.ownerEmail!,
     homeUserEmail: this.item?.ownerEmail!
   }
-    
+
+  var alertContainer = document.getElementById('alertContainer')!;
     this.tradeService.saveTrade(currentTrade).subscribe({
       next: (resp)=>{
-        this.router.navigate(['']), 
+        this.isSubmitted = true;
+        alertContainer.classList.remove('visually-hidden-focusable'), 
         console.log(currentTrade)
       },
       error: (er)=>{
