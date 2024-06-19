@@ -1,4 +1,4 @@
-
+@if(!isSubmitted){
     <div class="tables-container">
         <section>
             <h3>Il mio oggetto:</h3>
@@ -32,14 +32,23 @@
         </section>
         </div>
 <div>
-<button type="button" class="btn btn-secondary" routerLink= "/last">Indietro</button>
+
     <div class="tradeContainer">
         <form #tradeForm="ngForm" (ngSubmit)="onSubmit(tradeForm)">
           <div class="form-group">
             <label>*Data Proposta: <input type="date" name="exchangeDate" required ngModel></label>
           </div>
-          <button type="submit">Invia richiesta di scambio!</button>
+          <div class="btn"><button type="submit">Invia richiesta di scambio!</button></div>
         </form>
+        <div class="btn"><button type="button" class="btn btn-secondary" routerLink= "/last">Indietro</button></div>
     </div>
-
 </div>
+}     
+    <div class="visually-hidden-focusable" id="alertContainer">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Richiesta di scambio inviata</h4>
+            <p>Tieniti aggiornato sul nostro sito per controllare se la tua richiesta è stata accettata</p>
+            <hr>
+            <button type="button" class="btn btn-secondary" routerLink= "">Home</button>
+          </div>
+    </div>

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  gap: 30px;
 }
 
 .tables-container section {
@@ -11,7 +12,6 @@
 
 .table {
   width: 100%; 
-  max-width: 45%; 
 }
 
 @media (max-width: 768px) {
@@ -27,11 +27,19 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    height: 150px;
+    height: 200px;
     margin: auto;
     margin-bottom: 40px;
-    font-weight: bold
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
   }
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 button {
     font-size: 14px;
@@ -43,7 +51,7 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: "Playwrite FR Moderne";
@@ -53,7 +61,7 @@ button {
   button:hover {
     background-color: #21df2a;
     color: black;
-    transform: scale(1.05);
+    transform: scale(1.10);
   }
 
   label {
