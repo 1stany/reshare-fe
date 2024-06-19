@@ -1,5 +1,5 @@
-<h2>Wishlist</h2>
-<div>
+<div id="wishlist"><h3>Wishlist</h3></div>
+<div class="wishlistContainer">
     <table class="table table-striped m-4">
         <thead>
             <tr id="intestation">
@@ -18,11 +18,11 @@
                     <td>{{i.description}}</td>
                     <td>{{i.dateAdded}}</td>
                     
-                    <td><button type="button" class="btn btn-outline-success" [routerLink] = "['/delete-itemtype', i.id]">elimina</button></td>
+                    <td><button type="button" class="btn btn-outline-danger" [routerLink] = "['/delete-itemtype', i.id]">elimina</button></td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
 
-<button routerLink="/add-itemtype">Aggiungi una nuova tipologia di prodotto</button>
+<button id="aggiungi" routerLink="/add-itemtype">Aggiungi una nuova tipologia di prodotto</button>
