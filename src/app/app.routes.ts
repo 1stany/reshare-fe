@@ -8,6 +8,8 @@ import { TradeOfferComponent } from './trade-offer/trade-offer.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { AddItemtypeComponent } from './add-itemtype/add-itemtype.component';
 import { DeleteItemtypeComponent } from './delete-itemtype/delete-itemtype.component';
+import { TradeAddComponent } from './trade-add/trade-add.component';
+import { AddItemComponent } from './add-item/add-item.component';
 
 
 export const routes: Routes = [
@@ -20,6 +22,7 @@ export const routes: Routes = [
     {path: 'wishlist', component: WishlistComponent},
     {path: 'add-itemtype', component: AddItemtypeComponent},
     {path: 'delete-itemtype/:id', component: DeleteItemtypeComponent},
-
+    {path: 'trade-add', component: TradeAddComponent},
+    {path: 'add-item', component: AddItemComponent}
 ];
 

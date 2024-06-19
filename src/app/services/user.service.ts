@@ -9,13 +9,16 @@ import { User } from '../model/user.model';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:8080/market/user/item';
+  private apiUrl = 'http://localhost:8080/market/user';
+  //private userUrl = 'http://localhost:8080/user';
   
   constructor(private http : HttpClient, private loginService: LoginService) { }
 
   getItems() : Observable<Item[]> {
-    return this.http.get<Item[]>(this.apiUrl);
+    return this.http.get<Item[]>(`${this.apiUrl}/item`);
   }
 
-
+  // getUserDetails(): Observable<any>{
+  //   return this.http.get<User>(this.userUrl);
+  // }
 }
