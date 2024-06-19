@@ -1,0 +1,28 @@
+<h2>Wishlist</h2>
+<div>
+    <table class="table table-striped m-4">
+        <thead>
+            <tr id="intestation">
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Descrizione</th>
+                <th>Data</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tabody">
+            @for (i of myWishlist; track i.id){
+                <tr>
+                    <td>{{i.name}}</td> 
+                    <td>{{i.categoryName}}</td>
+                    <td>{{i.description}}</td>
+                    <td>{{i.dateAdded}}</td>
+                    
+                    <td><button type="button" class="btn btn-outline-success" [routerLink] = "['/delete-itemtype', i.id]">elimina</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<button routerLink="/add-itemtype">Aggiungi una nuova tipologia di prodotto</button>
