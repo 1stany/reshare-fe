@@ -15,7 +15,7 @@ export class WishlistService {
     return this.http.get<ItemType[]>(`${this.apiUrl}/user/my-wishlist`);
   }
 
-  addItemTypeForLoggedUser(userId: number, itemType: ItemType): Observable<any>{
+  addItemTypeForLoggedUser(itemType: ItemType): Observable<any>{
     return this.http.post(`${this.apiUrl}/user/itemType`, itemType);
   }
 
