@@ -9,6 +9,7 @@ import { LoginInfo } from '../model/loginInfo.model';
 })
 export class LoginService {
   private apiUrl = 'http://localhost:8080/login'
+  private userId : number | undefined;
   constructor(private http: HttpClient) { }
 
 
