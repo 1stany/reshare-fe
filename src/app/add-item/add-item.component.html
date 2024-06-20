@@ -15,28 +15,14 @@
       </select>
     </div>
 
-    <!--div class="form-group">
-      <label id="activetrade">*Pronto per lo scambio: 
-          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="activetrade" id="si" autocomplete="off" value="true" checked ngModel>
-            <label class="btn btn-outline-light" for="si">Sì</label>
-            <input type="radio" class="btn-check" name="activetrade" id="no" autocomplete="off" value="false" ngModel>
-            <label class="btn btn-outline-secondary " for="no">No</label>
-          </div>    
-      </label>
-    </div-->
-
     <div class="form-group">
-      <label id="activetrade">*Pronto per lo scambio: 
-          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <label class="btn btn-outline-light" for="si">
-            <input type="radio" class="btn-check" name="activetrade" id="si" autocomplete="off" value="true" checked ngModel>
-            Sì</label>
-
-            <label class="btn btn-outline-secondary " for="no">
-              <input type="radio" class="btn-check" name="activetrade" id="no" autocomplete="off" value="false" ngModel>
-            No</label>
-          </div>    
+      <label id="activetrade">*Pronto per lo scambio:
+        <div>
+          <input type="radio" class="btn-check" name="activetrade" id="option1" autocomplete="off" value="true" checked ngModel>
+          <label class="btn btn-secondary ms-5 mt-3" for="option1">SI</label>
+          <input type="radio" class="btn-check" name="activetrade" id="option2" autocomplete="off" value="false" ngModel>
+          <label class="btn btn-secondary ms-3 mt-3" for="option2">NO</label>
+        </div>
       </label>
     </div>
 
